@@ -1,0 +1,44 @@
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    min-height: 100vh;
+}
+
+.drop-zone.is-dragging {
+    border-color: #6366f1;
+    background-color: rgb(99 102 241 / 0.08);
+    transform: scale(1.01);
+}
+
+.file-card {
+    animation: appear 0.2s ease-out;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 9999px;
+    animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
